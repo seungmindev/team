@@ -4,11 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Sign in</title>
+
 </head>
 <body>
-
-어서오세요.
 
 </body>
 </html>

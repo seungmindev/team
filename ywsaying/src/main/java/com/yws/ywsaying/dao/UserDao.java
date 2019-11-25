@@ -1,5 +1,6 @@
 package com.yws.ywsaying.dao;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Repository;
 
 import com.yws.ywsaying.dto.User;
 import static com.yws.ywsaying.dao.UserDaoSqls.*;
+
 @Repository
 public class UserDao {
 	private NamedParameterJdbcTemplate jdbc;
@@ -41,8 +43,12 @@ public class UserDao {
 		return insertAction.executeAndReturnKey(params).longValue();
 	}
 	
-	public int deleteById(Long id) {
-		return -1;
-		
+	public int deleteByIdx(Long user_idx) {
+		Map<String, ?>params = Collections.singletonMap("user_idx", user_idx);
+		return jdbc.update(DELETE_BY_ID, params);		
+	}
+	
+	public int selectCount() {
+		return jdbc.queryForObject(SELECT_COUNT, Collections.emptyMap(), Integer.class);
 	}
 }
