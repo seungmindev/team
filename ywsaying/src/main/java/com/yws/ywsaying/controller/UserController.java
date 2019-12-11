@@ -49,13 +49,21 @@ public class UserController {
 		return "list";
 	}
 	
-	@PostMapping(path="/write")
-	public String write(@ModelAttribute User user,
+	@GetMapping(path="/signUp")
+	public String signUp() {
+		return "signUp";
+	}
+	@PostMapping(path="/signUpping")
+	public String signUpping(@ModelAttribute User user,
 						HttpServletRequest request) {
+		
+		
 		String clientIp = request.getRemoteAddr();
 		System.out.println("clientIp:" + clientIp);
+		System.out.println(user);
 		userService.addUser(user, clientIp);
-		return "redirect:list";				
+		
+		return "signIn";				
 	}
 	
 	
