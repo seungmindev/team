@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker");
+body{background: #000;}
+.container {
+  display: flex;
+  margin-top: -145px;
+  margin-left: 5px;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.container svg {
+  max-width: 45rem;
+  width: 100%;
+  height: auto;
+  stroke: black;
+  stroke-width: 10;
+}
+.container svg tspan > tspan {
+  stroke-dasharray: 1500;
+  stroke-dashoffset: -1500;
+}
+.container svg tspan > tspan:nth-of-type(1) {
+  animation: draw 700ms 400ms forwards;
+}
+.container svg tspan > tspan:nth-of-type(2) {
+  animation: draw 700ms 600ms forwards;
+}
+.container svg tspan > tspan:nth-of-type(3) {
+  animation: draw 700ms 700ms forwards;
+}
+.container svg tspan > tspan:nth-of-type(4) {
+  animation: draw 700ms 900ms forwards;
+}
+.container svg tspan > tspan:nth-of-type(5) {
+  animation: draw 700ms 1100ms forwards;
+}
+.container svg tspan > tspan:nth-of-type(6) {
+  animation: draw 700ms 1200ms forwards;
+}
+.container svg tspan > tspan:nth-of-type(7) {
+  animation: draw 700ms 1500ms forwards;
+}
+.container svg tspan > tspan:nth-of-type(8) {
+  animation: draw 700ms 1700ms forwards;
+}
+.container svg tspan > tspan:nth-of-type(9) {
+  animation: draw 700ms 1900ms forwards;
+}
+.container svg tspan > tspan:nth-of-type(10) {
+  animation: draw 700ms 2100ms forwards;
+}
+/* .container svg tspan > tspan:nth-of-type(11) {
+  animation: draw 300ms 1650ms forwards;
+}
+.container svg tspan > tspan:nth-of-type(12) {
+  animation: draw 300ms 1800ms forwards;
+}
+.container svg tspan > tspan:nth-of-type(13) {
+  animation: draw 300ms 1950ms forwards;
+} */
+/*.container svg tspan > tspan:nth-of-type(14) {
+  animation: draw 300ms 2100ms forwards;
+}
+.container svg tspan > tspan:nth-of-type(15) {
+  animation: draw 300ms 2250ms forwards;
+} */
+
+@keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

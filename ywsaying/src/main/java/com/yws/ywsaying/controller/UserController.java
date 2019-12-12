@@ -22,6 +22,11 @@ public class UserController {
 	@Autowired
 	UserService userService;
 	
+	@GetMapping(path="/main")
+	public String main() {
+		return "main";
+	}
+	
 	@GetMapping(path="/list")
 	public String list(@RequestParam(name="start", required=false, defaultValue="0") int start, 
 			   				ModelMap model) {

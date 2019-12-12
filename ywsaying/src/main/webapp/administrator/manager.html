@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>관리자페이지</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- style -->
+
+  <!-- script -->
+  <script src="../script/jquery-3.4.1.min.js"></script>
+  <script src="../script/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- 메뉴창 -->
+    <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark fixed-top bg-card04">
+      <a class="navbar-brand" href="main.html">YWsaying</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class=""> <img src="img/menu-icon.png" alt="menu-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="main.html">
+              <i class="fa fa-home"></i>
+              Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="mypage.html">
+              <span class="badge badge-danger">M</span>
+              </i>
+              <span class="hvr-underline-from-left">마이페이지</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="questions.html">
+              <span class="badge badge-warning">Q</span>
+              </i>
+              <span class="hvr-underline-from-left">문의사항</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <span class="badge badge-primary">C</span>
+              </i>
+              <span class="hvr-underline-from-left">카테고리</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">사랑</a>
+              <a class="dropdown-item" href="#">인생</a>
+              <a class="dropdown-item" href="#">공부</a>
+              <a class="dropdown-item" href="#">성공</a>
+              <a class="dropdown-item" href="#">친구</a>
+              <a class="dropdown-item" href="#">시간</a>
+              <a class="dropdown-item" href="#">희망</a>
+              <a class="dropdown-item" href="#">기타</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="write.html">글쓰기</a>
+            </div>
+          </li>
+        </ul>
+
+        <!-- 검색창 -->
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-primary my-2 my-sm-0" type="submit">검색</button>
+          <button class="btn btn-dark my-2 my-sm-0 ml-2" type="button"
+            onclick="location.href='index.html'">로그아웃</button>
+        </form>
+      </div>
+    </nav>
+
+    <div class="pt-5"></div>
+    <div class="pt-5"></div>
+
+    <div class="container">
+      <div class="row border-bottom mb-3">
+        <h3 class="col">회원정보</h3>
+      </div>
+      <div class="row border-bottom mb-3">
+        <div class="col">이름 : ###</div>
+        <div class="col">닉네임 : 93kymin</div>
+      </div>
+      <div class="row border-bottom mb-3">
+        <div class="col">이메일 : ###@gmail.com</div>
+      </div>
+
+
+    </div>
+  </div>
+</body>
+
+</html>

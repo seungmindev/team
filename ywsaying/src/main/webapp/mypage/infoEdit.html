@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>마이페이지</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="../css/bootstrap.css">
+
+  <!-- script -->
+  <script src="../script/jquery-3.4.1.min.js"></script>
+  <script src="../script/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- 메뉴창 -->
+    <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark fixed-top bg-card04">
+      <a class="navbar-brand" href="../main.html">YWsaying</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class=""> <img src="../img/menu-icon.png" alt="menu-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../main.html">
+              <i class="fa fa-home"></i>
+              Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="../mypage/mypage.html">
+              <span class="badge badge-danger">M</span>
+              </i>
+              <span class="hvr-underline-from-left">마이페이지</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../questions.html">
+              <span class="badge badge-warning">Q</span>
+              </i>
+              <span class="hvr-underline-from-left">문의사항</span>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <span class="badge badge-primary">C</span>
+              </i>
+              <span class="hvr-underline-from-left">카테고리</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">사랑</a>
+              <a class="dropdown-item" href="#">인생</a>
+              <a class="dropdown-item" href="#">공부</a>
+              <a class="dropdown-item" href="#">성공</a>
+              <a class="dropdown-item" href="#">친구</a>
+              <a class="dropdown-item" href="#">시간</a>
+              <a class="dropdown-item" href="#">희망</a>
+              <a class="dropdown-item" href="#">기타</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="../write.html">글쓰기</a>
+            </div>
+          </li>
+        </ul>
+
+        <!-- 검색창 -->
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-primary my-2" type="button" onclick="location.href='login.html'">로그인</button>
+          <button class="btn btn-dark bt-m my-2 ml-2" type="button" data-toggle="modal"
+            data-target="#exampleModalCenter">로그아웃
+          </button>
+        </form>
+      </div>
+    </nav>
+    <div class="pt-5"></div>
+    <div class="pt-4"></div>
+    <div class="container">
+      <br>
+      <div class="card my-0 mx-auto float-none" style="max-width: 500px;">
+        <div class="card-header font-weight-bold text-dark">나의 정보</div>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="inputPassword">비밀번호 변경</label>
+            <input type="password" class="form-control" id="inputPassword" placeholder="비밀번호를 입력해주세요">
+          </div>
+          <div class="form-group">
+            <label for="inputPasswordCheck">비밀번호 확인</label>
+            <input type="password" class="form-control" id="inputPasswordCheck" placeholder="다시한번 입력해주세요">
+          </div>
+
+          <div class="row">
+            <div class="form-group col-7">
+              <label>이메일</label>
+              <input type="email" id="email" class="form-control" placeholder="ex) abc@***.com">
+              <div class="check-email" id="check-email"></div>
+            </div>
+            <div class="form-group col">
+              <label class="sr-only">이메일 인증</label>
+              <div style="padding-top: 35px;"></div>
+              <button type="button" class="btn bg-card06">이메일인증</button>
+            </div>
+          </div>
+        <p class=" text-center pt-1">
+          <a href="#" id="btn-edit" class="btn btn-sm bg-card02">변경하기</a>
+        </p>
+      </div>
+    </div>
+    <br>
+    <p class=" text-center">
+      <a href="mypage.html" class="btn btn-sm bg-secondary ">뒤로가기</a>
+    </p>
+  </div>
+
+  <!-- 로그아웃-경고창 -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">확인</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-dark">
+          로그아웃 하시겠습니까?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+          <button type="button" class="btn btn-dark" onclick="location.href='../login.html'">로그아웃</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</body>
+
+</html>
