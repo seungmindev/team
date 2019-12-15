@@ -16,8 +16,8 @@
   <link rel="stylesheet" href="css/animate.css">
 
   <!-- script -->
-  <script src="script/jquery-3.4.1.min.js"></script>
-  <script src="script/bootstrap.min.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 
   <link href="https://fonts.googleapis.com/css?family=Stylish&display=swap&subset=korean" rel="stylesheet">
 
@@ -44,7 +44,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="main.html">
+            <a class="nav-link" href="main">
               Home
               <span class="sr-only">(current)</span>
             </a>
@@ -506,8 +506,8 @@
 
 
   <!-- script -->
-  <script src="script/wow.min.js"></script>
-  <script src="script/custom.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/custom.js"></script>
 
   <script>
     wow = new WOW({});

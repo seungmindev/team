@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/bootstrap.css">
 
   <!-- script -->
-  <script src="script/jquery-3.4.1.min.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
 
 
 
@@ -31,11 +31,11 @@
         <h1 class="h4 text-gray-900 mb-5">회원가입</h1>
       </div>
 
-      <form>
+      <form method="post" id="signUpForm" action="signUpping">
         <div class="row">
           <div class="form-group col">
             <label>아이디</label>
-            <input type="text" id="id" class="form-control" placeholder="4~12자리 영어,숫자를 입력해주세요" maxlength="12">
+            <input type="text" name="user_id" id="id" class="form-control" placeholder="4~12자리 영어,숫자를 입력해주세요" maxlength="12">
             <div class="check-id" id="check-id"></div>
           </div>
         </div>
@@ -43,7 +43,7 @@
         <div class="row">
           <div class="form-group col">
             <label>비밀번호</label>
-            <input type="password" id="pw" class="form-control" placeholder="4~12자리를 입력해주세요." maxlength="12">
+            <input type="password" name="user_password" id="pw" class="form-control" placeholder="4~12자리를 입력해주세요." maxlength="12">
             <div class="check-pw" id="check-pw"></div>
           </div>
         </div>
@@ -58,13 +58,13 @@
         <div class="row">
           <div class="form-group col">
             <label>이름</label>
-            <input type="text" name="name" id="name" class="form-control" placeholder="ex) 홍길동" maxlength="6">
+            <input type="text" name="user_name" id="name" class="form-control" placeholder="ex) 홍길동" maxlength="6">
             <div class="check-name" id="check-name"></div>
           </div>
 
           <div class="form-group col">
             <label>닉네임</label>
-            <input type="text" id="nick" class="form-control" placeholder="2~8자리" maxlength="8">
+            <input type="text" name="user_nickname" id="nick" class="form-control" placeholder="2~8자리" maxlength="8">
             <div class="check-nick" id="check-nick"></div>
           </div>
         </div>
@@ -72,11 +72,11 @@
         성별
         <div class="form-group row ml-1 mb-3">
           <div class="custom-control custom-radio mr-4">
-            <input type="radio" id="gender-male" name="gender" class="custom-control-input gender">
+            <input type="radio" id="gender-male" name="user_gender" value="m" class="custom-control-input gender">
             <label class="custom-control-label" for="gender-male">남자</label>
           </div>
           <div class="custom-control custom-radio">
-            <input type="radio" id="gender-female" name="gender" class="custom-control-input gender">
+            <input type="radio" id="gender-female" name="user_gender" value="f"class="custom-control-input gender">
             <label class="custom-control-label" for="gender-female">여자</label>
           </div>
           <div class="check-gender" id="check-gender"></div>
@@ -86,8 +86,24 @@
           <div class="row">
             <div class="form-group col-7">
               <label>생년월일</label>
-              <input id="birth" class="form-control " placeholder="ex) 19971202">
-              <div class="check-birth" id="check-birth"></div>
+              <input type="text" name="user_bir_yy"  placeholder="년(4자)" aria-label="년(4자)" class="form-control-small" maxlength="4">
+              <select name="user_bir_mm"class="form-control-small" aria-label="월">
+										<option value="">월</option>
+										 <option value="1">1</option>
+										 <option value="2">2</option>
+										 <option value="3">3</option>
+										 <option value="4">4</option>
+										 <option value="5">5</option>
+										 <option value="6">6</option>
+										 <option value="7">7</option>
+										 <option value="8">8</option>
+										 <option value="9">9</option>
+										 <option value="10">10</option>
+										 <option value="11">11</option>
+										 <option value="12">12</option>
+									</select>
+				<input type="text" name="user_bir_dd"  placeholder="일" aria-label="일" class="form-control-small" maxlength="2">					
+              <div class="check-birth" id="check-birth"></div>	
             </div>
           </div>
         </div>
@@ -95,7 +111,7 @@
         <div class="row">
           <div class="form-group col-7">
             <label>이메일</label>
-            <input type="email" id="email" class="form-control" placeholder="ex) abc@***.com">
+            <input type="email" name="user_email" id="email" class="form-control" placeholder="ex) abc@***.com">
             <div class="check-email" id="check-email"></div>
           </div>
           <div class="form-group col">
@@ -146,5 +162,5 @@
 	</form>
 	
 </body>
-  <script src="script/custom.js"></script>
+  <script src="js/custom.js"></script>
 </html>

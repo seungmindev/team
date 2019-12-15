@@ -54,10 +54,13 @@ public class UserController {
 		return "list";
 	}
 	
+	//회원가입 페이지
 	@GetMapping(path="/signUp")
 	public String signUp() {
 		return "signUp";
 	}
+	
+	//회원가입 후 로그인페이지
 	@PostMapping(path="/signUpping")
 	public String signUpping(@ModelAttribute User user,
 						HttpServletRequest request) {
@@ -70,6 +73,7 @@ public class UserController {
 		
 		return "signIn";				
 	}
+	
 	
 	
 	

@@ -197,11 +197,12 @@ $('#singUp').click(function (e) {
   }
 
   // 생년월일 정규식
-  if (birthJ) {
-    inval_Arr[4] = true;
-  } else {
-    inval_Arr[4] = false;
-  }
+  inval_Arr[4] = true;
+//  if (birthJ) {
+//    inval_Arr[4] = true;
+//  } else {
+//    inval_Arr[4] = false;
+//  }
 
   // 이메일 정규식
   if (mailJ.test($('#email').val())) {
@@ -220,11 +221,12 @@ $('#singUp').click(function (e) {
   // 유효성 모두 통과
   if (validAll) {
     alert('회원가입이 완료되었습니다.!');
-    document.location.href = "login.html";
+    document.getElementById('signUpForm').submit();    
+//    document.location.href = "login.html";
 
   } else {
     alert('입력한 정보들을 다시 한번 확인해주세요 :)')
-
+    
   }
 });
 
