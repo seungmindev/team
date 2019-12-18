@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Import;
 
 @Configuration
 @ComponentScan(basePackages= {"com.yws.ywsaying.dao","com.yws.ywsaying.service"})
-@Import({DBConfig.class})
+@Import({DBConfig.class, EmailConfig.class})
 public class ApplicationConfig {
 
 }

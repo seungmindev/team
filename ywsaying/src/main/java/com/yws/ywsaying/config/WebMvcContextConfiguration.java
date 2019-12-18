@@ -40,9 +40,7 @@ public class WebMvcContextConfiguration extends WebMvcConfigurerAdapter{
 		resolver.setPrefix("/WEB-INF/views/");
 		resolver.setSuffix(".jsp");
 		return resolver;
-	}
-	
-	
+	}	
 	
 	
 	
