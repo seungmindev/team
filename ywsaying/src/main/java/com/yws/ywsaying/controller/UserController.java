@@ -2,6 +2,7 @@ package com.yws.ywsaying.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.yws.ywsaying.dto.User;
 import com.yws.ywsaying.service.UserService;
@@ -56,7 +58,10 @@ public class UserController {
 	
 	//회원가입 페이지
 	@GetMapping(path="/signUp")
-	public String signUp() {
+	public String signUp(ModelMap model) {
+		
+		int ran = new Random().nextInt(900000)+ 100000;
+		model.addAttribute("random", ran);	
 		return "signUp";
 	}
 	

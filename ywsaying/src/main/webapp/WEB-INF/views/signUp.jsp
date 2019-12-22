@@ -82,10 +82,12 @@
           <div class="check-gender" id="check-gender"></div>
         </div>
 
-        <div class="form-group">
+        
           <div class="row">
-            <div class="form-group col-7">
-              <label>생년월일</label>
+           <div class="form-group col">
+           		<div>
+             		<label>생년월일</label>    
+             	</div>     
               <input type="text" name="user_bir_yy"  placeholder="년(4자)" aria-label="년(4자)" class="form-control-small" maxlength="4">
               <select name="user_bir_mm"class="form-control-small" aria-label="월">
 										<option value="">월</option>
@@ -103,10 +105,11 @@
 										 <option value="12">12</option>
 									</select>
 				<input type="text" name="user_bir_dd"  placeholder="일" aria-label="일" class="form-control-small" maxlength="2">					
-              <div class="check-birth" id="check-birth"></div>	
+              	<div class="check-birth" id="check-birth"></div>
+              </div>	
             </div>
-          </div>
-        </div>
+          
+        
 
         <div class="row">
           <div class="form-group col-7">
@@ -115,12 +118,19 @@
             <div class="check-email" id="check-email"></div>
           </div>
           <div class="form-group col">
-            <label class="sr-only">이메일 인증</label>
-            <div style="padding-top: 35px;"></div>
-            <button type="button" class="btn bg-card06">이메일인증</button>
-          </div>
+          	<div style="padding-top: 35px;"></div>
+             <button type="button" class="btn bg-card06" id="emailBtn">인증번호발송</button>
+            </div>           
+          <input type="hidden" path="random" id="random" value="${random }" />
         </div>
-
+        <div class="row">
+        	<div class ="form-group col-7">
+        		<input type="text" id="emailAuth" class="form-control">
+        	</div>
+        	<div class="form-group col">
+         		<button type="button" class="btn bg-card06" id="emailAuthBtn">인증번호확인</button>
+         	</div>
+         </div>
         <hr>
 
         <div class="form-group text-center mt-4">
@@ -144,22 +154,6 @@
 
     </div>
   </div>
-
- 
-
-	<form method="post" action="signUpping">
-	ID:<input type="text" name="user_id" ><br>
-	PW:<input type="password" name="user_password" >
-	PW:<input type="password" >
-	NAME:<input type="text" name="user_name" >
-	BIRTHDAY year :<input type="text" name="user_bir_yy">
-	BIRTHDAY month :<input type="text" name="user_bir_mm">
-	BIRTHDAY day :<input type="text" name="user_bir_dd">
-	GENDER : <input type="text" name="user_gender">
-	NICKNAME:<input type="text" name="user_nickname">	
-	email :<input type="text" name="user_email">
-	<input type="submit" value="등록">	
-	</form>
 	
 </body>
   <script src="js/custom.js"></script>
