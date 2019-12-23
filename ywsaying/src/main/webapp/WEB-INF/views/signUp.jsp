@@ -82,34 +82,30 @@
           <div class="check-gender" id="check-gender"></div>
         </div>
 
-        
-          <div class="row">
-           <div class="form-group col">
-           		<div>
-             		<label>생년월일</label>    
-             	</div>     
-              <input type="text" name="user_bir_yy"  placeholder="년(4자)" aria-label="년(4자)" class="form-control-small" maxlength="4">
-              <select name="user_bir_mm"class="form-control-small" aria-label="월">
-										<option value="">월</option>
-										 <option value="1">1</option>
-										 <option value="2">2</option>
-										 <option value="3">3</option>
-										 <option value="4">4</option>
-										 <option value="5">5</option>
-										 <option value="6">6</option>
-										 <option value="7">7</option>
-										 <option value="8">8</option>
-										 <option value="9">9</option>
-										 <option value="10">10</option>
-										 <option value="11">11</option>
-										 <option value="12">12</option>
-									</select>
-				<input type="text" name="user_bir_dd"  placeholder="일" aria-label="일" class="form-control-small" maxlength="2">					
-              	<div class="check-birth" id="check-birth"></div>
-              </div>	
-            </div>
-          
-        
+       생년월일
+        <div class="row col-12 mt-1">
+          <input type="text" name="user_bir_yy" placeholder="년(4자)" aria-label="년(4자)"
+            class="form-control-sm col-4 mr-3" maxlength="4">
+          <select name="user_bir_mm" class="form-control-sm col-3 mr-3" aria-label="월">
+            <option value="">월</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+          <input type="text" name="user_bir_dd" placeholder="일" aria-label="일" class="form-control-sm col-3"
+            maxlength="2">
+          <div class="check-birth" id="check-birth"></div>
+        </div>
+        <br>
 
         <div class="row">
           <div class="form-group col-7">
